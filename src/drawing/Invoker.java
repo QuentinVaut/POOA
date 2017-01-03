@@ -23,6 +23,7 @@ public class Invoker implements ActionListener {
         c.execute();
     }
 
+
     public void executeCommand(String command) {
         switch (command) {
             case "Circle":
@@ -53,9 +54,6 @@ public class Invoker implements ActionListener {
                     Lst_Commande.add(Lst_RedoCommand.get(Lst_RedoCommand.size() - 1));
                     Lst_RedoCommand.remove(Lst_RedoCommand.size() - 1);
                 }
-                break;
-            case "Deplacer":
-                doAction(new CommandDeplacer(drawing));
                 break;
         }
     }

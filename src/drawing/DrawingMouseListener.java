@@ -14,6 +14,8 @@ public class DrawingMouseListener implements MouseMotionListener, MouseListener 
 	Shape currentShape = null;
     Point dernierPoint;
 	Invoker invoker;
+    CommandDeplacer deplacer;
+    Point startPoint;
 	
 	public DrawingMouseListener(Drawing d,Invoker inv){
 		this.invoker = inv;
@@ -38,6 +40,7 @@ public class DrawingMouseListener implements MouseMotionListener, MouseListener 
 		for(Shape s : drawing){
 			if(s.isOn(e.getPoint())){
 				currentShape = s;
+                startPoint = currentShape.origin;
                 currentShape.isSelected = true;
                 System.out.println("Forme selectionné.");
                 break;
@@ -49,12 +52,11 @@ public class DrawingMouseListener implements MouseMotionListener, MouseListener 
 	 * D�s�lectionne la forme
 	 */
 	public void mouseReleased(MouseEvent e) {
-        System.out.println("Mouse release");
-        invoker.executeCommand("Deplacer");
+        if(currentShape != null) {
+            deplacer = new CommandDeplacer(drawing,currentShape,startPoint);
+            invoker.doAction(deplacer);
+        }
         currentShape = null;
-
-
-
 	}
 
 	public void mouseMoved(MouseEvent e) {
