@@ -11,6 +11,7 @@ public class DecorateurShape extends Shape {
 
     public DecorateurShape(Shape shape) {
         this.shape = shape;
+        this.origin = shape.getPoint();
     }
 
     public void setText(String myLabel) {
