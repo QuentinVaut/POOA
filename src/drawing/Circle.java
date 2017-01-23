@@ -25,16 +25,6 @@ public class Circle extends Shape{
 	}
 
 	@Override
-	public void setLabel(String label) {
-
-	}
-
-	@Override
-	public String getLabel() {
-		return null;
-	}
-
-	@Override
 	public Shape clone() {
 		Circle cercle = new Circle(this.origin,this.radius,this.color);
 		return cercle;

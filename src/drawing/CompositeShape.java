@@ -59,16 +59,6 @@ public class CompositeShape extends Shape {
     }
 
     @Override
-    public void setLabel(String label) {
-
-    }
-
-    @Override
-    public String getLabel() {
-        return null;
-    }
-
-    @Override
     public Shape clone() {
         CompositeShape compositeShape = new CompositeShape();
         compositeShape.origin = this.origin;

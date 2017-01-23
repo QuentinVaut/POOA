@@ -61,6 +61,7 @@ public class Paint implements Observable {
         buttonPanel.add(dupliquerButton);
         buttonPanel.add(undoButton);
         buttonPanel.add(redoButton);
+        buttonPanel.add(addTextButton);
 
         mainPanel.add(buttonPanel, BorderLayout.SOUTH);
         mainPanel.add(drawing, BorderLayout.CENTER);
@@ -103,4 +104,6 @@ public class Paint implements Observable {
      static ElementCounter getCompteur() {
         return  counter;
     }
+
+
 }

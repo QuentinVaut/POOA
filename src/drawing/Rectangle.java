@@ -22,16 +22,6 @@ public class Rectangle extends Shape {
 	}
 
 	@Override
-	public void setLabel(String label) {
-
-	}
-
-	@Override
-	public String getLabel() {
-		return null;
-	}
-
-	@Override
 	public Shape clone() {
 		Rectangle rectangle = new Rectangle(this.origin,this.width,this.height,this.color);
 		return rectangle;

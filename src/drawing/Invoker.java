@@ -55,6 +55,9 @@ public class Invoker implements ActionListener {
                     Lst_RedoCommand.remove(Lst_RedoCommand.size() - 1);
                 }
                 break;
+            case "Txt":
+                doAction(new CommandTextButton(drawing));
+                break;
         }
     }
 

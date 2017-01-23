@@ -10,7 +10,8 @@ public abstract class Shape {
 	
 	protected Point origin;
 	public boolean isSelected = false;
-	
+
+
 	public void setOrigin(Point p)
 	{
 		origin = p;
@@ -29,9 +30,6 @@ public abstract class Shape {
 	 * renvoie true si la forme occupe sur le point donn�
 	 */
 	public abstract boolean isOn(Point p);
-	public abstract void setLabel(String label);
-
-	public abstract String getLabel();
 
 	public abstract Shape clone();
 }
